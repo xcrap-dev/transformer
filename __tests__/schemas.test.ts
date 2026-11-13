@@ -109,7 +109,9 @@ describe("url", () => {
 
     it("rejects invalid input", () => {
         expect(t.url().safeParse("/relative").error?.issues[0].message).toContain("no base was given")
-        expect(t.url({ base: "https://site.com" }).safeParse("http://").error?.issues[0].message).toContain("not a valid URL")
+        expect(t.url({ base: "https://site.com" }).safeParse("http://").error?.issues[0].message).toContain(
+            "not a valid URL",
+        )
         expect(t.url({ base: "https://site.com" }).safeParse("javascript:void(0)").success).toBe(false)
         expect(t.url({ protocols: ["mailto:"] }).parse("mailto:a@b.co")).toBe("mailto:a@b.co")
     })

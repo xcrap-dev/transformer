@@ -17,7 +17,9 @@ export function url({ base, protocols = ["http:", "https:"] }: UrlOptions = {}) 
         } catch {
             ctx.issues.push({
                 code: "custom",
-                message: base ? `"${value}" is not a valid URL` : `"${value}" is not an absolute URL and no base was given`,
+                message: base
+                    ? `"${value}" is not a valid URL`
+                    : `"${value}" is not an absolute URL and no base was given`,
                 input: value,
             })
 

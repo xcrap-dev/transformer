@@ -13,7 +13,10 @@
     "test": "vitest run",
     "build": "tsc",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "format": "prettier --write \"src/**/*.ts\" \"__tests__/**/*.ts\"",
+    "lint": "oxlint src __tests__",
+    "lint:fix": "oxlint src __tests__ --fix"
   },
   "keywords": [
     "xcrap",
@@ -25,9 +28,12 @@
   "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
     "@types/he": "^1.2.3",
     "@types/node": "24.0.3",
     "@vitest/coverage-v8": "^5.1.0",
+    "oxlint": "^1.93.0",
+    "prettier": "^3.10.1",
     "ts-node": "10.9.2",
     "typescript": "5.8.3",
     "vitest": "^5.1.0",
