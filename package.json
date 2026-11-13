@@ -1,6 +1,6 @@
 {
   "name": "@xcrap/transformer",
-  "version": "0.3.7",
+  "version": "1.0.0",
   "description": "Xcrap Transformer is a set of ready-made Zod schemas to clean, convert and validate scraped data (prices, URLs, dates, numbers and more).",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
