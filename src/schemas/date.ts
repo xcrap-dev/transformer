@@ -30,7 +30,9 @@ export function date({ format, locale, unit = "ms" }: DateOptions = {}) {
         if (!isValid(parsed)) {
             ctx.issues.push({
                 code: "custom",
-                message: format ? `"${value}" does not match the date format "${format}"` : `"${value}" is not a valid date`,
+                message: format
+                    ? `"${value}" does not match the date format "${format}"`
+                    : `"${value}" is not a valid date`,
                 input: value,
             })
 
